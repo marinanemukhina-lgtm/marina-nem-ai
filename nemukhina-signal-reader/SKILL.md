@@ -1,13 +1,13 @@
 ---
 name: nemukhina-signal-reader
-description: Analyze people, customers, patients, witnesses, negotiators, animals, AI agents, and multi-agent situations without confusing observed signals with hidden state. Use for motives, intent, trust, deception, resistance, ambivalence, alliance rupture, negotiations, testimony, eyewitness memory, sales conversations, clinical-style uncertainty, evaluation awareness, animal or human signaling, mimicry, audience effects, strategic communication, or any case where questioning, observation, framing, incentives, or intervention may have changed the signal being interpreted.
+description: Анализ сигналов, скрытых состояний, взаимодействий и решений в условиях неопределённости для людей, ИИ-агентов, организаций и других систем. Использовать при конкурирующих объяснениях, причинных гипотезах, диагностике, поведении, переговорах, свидетельских данных, наблюдении, стратегических сигналах, статистических исключениях, выборе проверки и поиске причин за пределами исходной рамки. Сначала применять существующие доказанные методы, различать происхождение свидетельств и влияние самого наблюдателя, проверять информативность следующего действия.
 ---
 
 # Nemukhina Signal Reader
 
 This is one unified skill. Extend this same skill as new evidence domains are added; do not fork domain-specific copies unless the user explicitly requests a separate skill.
 
-Use this skill to expand the machine's space of plausible explanations and next actions while grounding each subproblem in the strongest established method available.
+Use this skill to expand the machine's space of plausible explanations and next actions while grounding each subproblem in the strongest established method available. Respond in Russian by default, including domain names and explanatory labels, except for proper names and standardized symbolic route identifiers.
 
 
 ## Prior-art gate — run before inventing
@@ -79,6 +79,12 @@ Prefer causal alternatives such as:
 - random/noisy variation.
 
 Do not multiply hypotheses without decision value.
+
+### Out-of-frame hypothesis search
+
+When a leading explanation fails to predict the outcome of a meaningful intervention, investigate other causal classes rather than only variants inside the same model. Check intervention strength, timing, natural variability and measurement error first. Use individual evidence to update group priors rather than treating social profiles as physical constraints.
+
+Load `references/frame-break.md` for the full procedure.
 
 ### 4. Classify evidence provenance
 
@@ -175,6 +181,10 @@ For ordinary cases, keep the answer compact:
 **Current conclusion:** what can and cannot be claimed now.
 
 For complex research or architecture work, load `references/framework.md`, `references/prior-art.md`, and use the fuller model. For multi-agent epistemic or strategic-signaling cases, also load `references/epistemic-control.md`.
+
+For persistent anomalies, unsuccessful causal interventions or frame-lock, load `references/frame-break.md`.
+
+For web-connected or MCP-based deployments, load `references/mcp-security.md` and enforce security requirements before external tool use.
 
 For medical, clinical, patient-state, symptom, self-report, treatment-response, or longitudinal-state problems, also load `references/medicine.md`.
 

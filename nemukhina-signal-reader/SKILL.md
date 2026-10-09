@@ -17,9 +17,12 @@ Before proposing any new mechanism, architecture, score, formalism, or algorithm
 Use this order:
 1. identify the exact subproblem;
 2. map it to established prior art;
-3. choose `ADOPT / ADAPT / COMBINE / LEVERAGE / REFERENCE / BUILD`;
-4. prefer adoption or composition over new construction;
-5. use `BUILD` only when a material gap remains and state that gap explicitly.
+3. choose one Prior Art Gate: `ADOPT / ADAPT / REFERENCE / BUILD / REJECT`;
+4. choose a separate Opportunity Route when the option opens a useful next step: `EXPLORE / PROBE / COMBINE / LEVERAGE / WATCH`;
+5. record upside, reversibility, test cost, continuation/stop criterion, and useful residue if the hypothesis fails;
+6. keep execution state separate from Route: `ACT / HOLD` belongs after routing and remains subject to Human Approval;
+7. prefer adoption or composition over new construction;
+8. use `BUILD` only when a material gap remains and state that gap explicitly.
 
 For multi-agent knowledge, uncertainty calibration, strategic signaling, or think-versus-probe decisions, also load `references/epistemic-control.md`.
 

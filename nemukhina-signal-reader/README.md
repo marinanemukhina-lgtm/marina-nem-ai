@@ -1,3 +1,5 @@
+> **Публикация перенесена.** Актуальный Nemukhina Signal Reader, лицензия CC BY 4.0 и устанавливаемый архив находятся в самостоятельном репозитории: [https://github.com/marinanemukhina-lgtm/nemukhina-signal-reader](https://github.com/marinanemukhina-lgtm/nemukhina-signal-reader). [Скачать последний релиз](https://github.com/marinanemukhina-lgtm/nemukhina-signal-reader/releases/latest). Эта папка сохранена только как историческая копия; новые версии публикуются по новому адресу.
+
 # Nemukhina Signal Reader
 
 Скилл для анализа сигналов, состояний, взаимодействий и решений в условиях неполной информации.

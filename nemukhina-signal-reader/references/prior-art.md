@@ -6,13 +6,23 @@ Use this reference before proposing a new mechanism, architecture, formalism, or
 
 Do not build a custom mechanism merely because it can be described from first principles. First ask whether an existing formalism or implementation already solves the relevant subproblem better.
 
-Classify each candidate as:
+Classify each candidate with two independent decisions.
+
+### Prior Art Gate
 - `ADOPT`: use the existing formalism directly as the conceptual basis;
 - `ADAPT`: preserve its core mechanism but generalize the domain or interfaces;
-- `COMBINE`: join two established mechanisms because the task spans both;
-- `LEVERAGE`: use as a calibration, testing, or control layer;
 - `REFERENCE`: keep as prior art/background, but do not import its machinery;
-- `BUILD`: create a new mechanism only when a material gap remains after the prior-art check.
+- `BUILD`: create a new mechanism only when a material gap remains after the prior-art check;
+- `REJECT`: do not use this option in the current architecture.
+
+### Opportunity Route
+- `EXPLORE`: study the mechanism or reframing before implementation;
+- `PROBE`: run a bounded reversible test on a real case;
+- `COMBINE`: connect the mechanism with existing independent layers;
+- `LEVERAGE`: amplify an existing resource or open a new use without a major new dependency;
+- `WATCH`: define the event or threshold that should reopen the question.
+
+Do not use `COMBINE` or `LEVERAGE` as Gate statuses. Do not put `ACT` or `HOLD` inside Opportunity Route; they belong to the later execution decision and remain subject to Human Approval.
 
 ## Current map
 
@@ -30,7 +40,7 @@ Relevant implementations:
 
 Do not recreate epistemic state-transition logic in prose when these formalisms fit.
 
-### Epistemic calibration in LLM multi-agent planning — LEVERAGE
+### Epistemic calibration in LLM multi-agent planning — Gate: ADAPT; Route: LEVERAGE
 Use the EPC-AW pattern when execution can be correct but planning fails because agents are miscalibrated about who knows what.
 
 Relevant implementation:
@@ -47,7 +57,7 @@ Relevant implementation:
 
 Adapt beyond software engineering. Do not assume its psychological profile is ground truth; preserve Signal Reader's provenance and uncertainty discipline.
 
-### Strategic impression shaping — ADOPT + COMBINE
+### Strategic impression shaping — Gate: ADOPT; Route: COMBINE
 Use inverse planning to infer hidden goals from observed actions.
 Use inverse-inverse planning when an agent may deliberately choose actions to shape an observer's inference.
 
@@ -59,7 +69,7 @@ Always consider both directions when incentives justify it:
 and
 `desired observer inference -> chosen action`.
 
-### Causal analysis — ADAPT / LEVERAGE
+### Causal analysis — Gate: ADAPT; Route: LEVERAGE
 Do not invent a bespoke causal engine when the task is standard causal discovery or intervention estimation.
 
 Relevant implementation:
@@ -67,7 +77,7 @@ Relevant implementation:
 
 Use Signal Reader to decide *what causal question to ask and whether the evidence is contaminated*; defer standard causal-estimation logic to established causal methods.
 
-### Uncertainty-sensitive action / information gathering — ADOPT principle
+### Uncertainty-sensitive action / information gathering — Gate: ADOPT; Route: PROBE
 Before acting, estimate uncertainty and decide whether to exploit the current best hypothesis or gather more information.
 
 Use the general principle:
